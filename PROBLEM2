@@ -1,0 +1,58 @@
+/* Write a program that computes a customer’s water bill. 
+The bill includes a Php 35 water demand charge plus a consumption (use) charge of Php 1.10 for every gallon used. 
+Consumption is figured from meter readings in gallons taken recently and during the previous month. 
+If the customer’s unpaid balance is greater than 0, a P20 late charge is assessed as well. */
+
+// BY LEI-ANN EDANG (ENG 1-12)
+
+#include <iostream>
+#include <conio.h>
+#include <cmath>
+
+using namespace std;
+
+int main()
+
+{
+	
+	double prev_consump, recent_consump, bill, unpaid;
+
+	cout << "Enter previous consumption (in gallons): ";
+	cin >> prev_consump;
+	
+	if (prev_consump < 0)
+		cout << "Invalid consumption value!";
+		
+	else
+	
+	{
+		
+		cout << "Enter recent consumption (in gallons): ";
+		cin >> recent_consump;
+		
+		if (recent_consump < 0)
+			cout << "Invalid consumption value!";
+				
+		else 
+		
+		{
+			cout << "Enter unpaid balance: Php ";
+			cin >> unpaid;
+			
+			if (unpaid > 0)
+				bill = fabs(unpaid+35+(recent_consump-prev_consump)*1.10+20);
+				
+			else
+				bill = fabs(35+(recent_consump-prev_consump)*1.10);
+		
+				cout << "Your total bill is Php " << bill << "." << endl; 
+			
+			_getch();
+			return 0;
+			
+		}
+
+	}
+}
+
+
