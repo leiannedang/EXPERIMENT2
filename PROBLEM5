@@ -1,0 +1,29 @@
+/*  Create a program that will “count” numbers, separated by commas, up to 10.  
+When it reaches 10, count by 2s until you reach 30.  
+See the sample output below: 
+Counting… 1,2,3,4,5,6,7,8,9,10,12,14,16,18,20,22,24,26,28,30 */
+
+// BY LEI-ANN EDANG (ENG 1-12)
+
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main ()
+
+{
+	int i;
+	
+	cout << "Counting... ";
+	
+	for (i=1; i<10; i++)
+		cout << i << ",";
+	
+	for (i=10; i<=30; i+=2)
+		cout << i << ",";
+		
+	_getch();
+	return 0;
+	
+}
