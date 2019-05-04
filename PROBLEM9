@@ -1,0 +1,53 @@
+/* Create a program that will draw a box using “*” characters given its dimensions in rows and columns.  
+See the sample outputs below:
+
+How many rows: 6 
+How many columns: 8 
+******** 
+******** 
+******** 
+******** 
+******** 
+******** 
+
+How many rows: 5 
+How many columns: 12 
+************ 
+************ 
+************ 
+************ 
+************ */
+
+// BY LEI-ANN EDANG (ENG 1-12)
+
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+
+{
+	
+	int i, j, row, column;
+	
+	cout << "How many rows: ";
+	cin >> row;
+	
+	cout << "How many columns: ";
+	cin >> column;
+	
+	for (i=1; i<=row; i++)
+	
+	{
+		
+		for (j=1; j<=column; j++)
+		cout << "*";
+		cout << "\n";
+		
+	}
+	
+	_getch();
+	return 0;
+	
+}
